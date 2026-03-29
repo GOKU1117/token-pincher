@@ -1,57 +1,81 @@
-# Python
+# ── Python ────────────────────────────────────────────────────────────
 __pycache__/
 *.py[cod]
 *.pyo
 *.pyd
+*.so
 
-# Virtual Environment
+# ── Virtual Environment ───────────────────────────────────────────────
 venv/
-.env/
-.env
+.venv/
+env/
 
-# Distribution / packaging
+# ── Environment Variables ─────────────────────────────────────────────
+.env
+.env.local
+.env.production
+.env.*.local
+
+# ── Distribution / Packaging ──────────────────────────────────────────
 build/
 dist/
 *.egg-info/
+*.egg
+MANIFEST
 
-# Logs
-*.log
-
-# OS
-.DS_Store
-Thumbs.db
-
-# IDE
-.vscode/
-.idea/
-
-# Testing
+# ── Testing & Coverage ────────────────────────────────────────────────
 .coverage
 .pytest_cache/
+htmlcov/
+.tox/
 
-# FastAPI
+# ── Logs ──────────────────────────────────────────────────────────────
+*.log
+logs/
+
+# ── Database ──────────────────────────────────────────────────────────
 *.sqlite3
+*.db
 
-# Node (if you upgrade frontend later)
+# ── Node / Frontend ───────────────────────────────────────────────────
 node_modules/
-npm-debug.log
-yarn-error.log
+npm-debug.log*
+yarn-error.log*
+yarn-debug.log*
+pnpm-debug.log*
+frontend/dist/
+frontend/.cache/
+frontend/build/
+.vite/
 
-# Frontend build
-dist/
-.cache/
+# ── Ollama ────────────────────────────────────────────────────────────
+# model files if downloaded locally
+*.gguf
+*.bin
+models/
 
-# Environment variables
-.env.local
-.env.production
+# ── IDE ───────────────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
 
-# Mac/Linux temp
+# ── OS ────────────────────────────────────────────────────────────────
+.DS_Store
+.DS_Store?
+._*
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# ── Temp / Editor Swap ────────────────────────────────────────────────
 *.swp
 *.swo
-
-# Coverage
-htmlcov/
-
-# Misc
 *.bak
 *.tmp
+*~
+
+# ── Misc ──────────────────────────────────────────────────────────────
+.cache/
+.mypy_cache/
+.ruff_cache/
